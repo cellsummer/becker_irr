@@ -1,0 +1,20 @@
+[package]
+name = "becker_irr_rs"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "becker_irr_rs"
+# "cdylib" is necessary for creating a Python extension
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18.3", features = ["extension-module"] }
+
+[build-dependencies]
+maturin = "0.15.1"
+
+[package.metadata.maturin]
+# Name of the module as it will appear in Python
+name = "becker_irr_rs"
